@@ -7,9 +7,9 @@ with open('MSX.json') as file:
 
 app = Flask(__name__)
 
-@app.route('/juegos', methods=["GET","POST"])
+@app.route('/', methods=["GET","POST"])
 def inicio():
-    return render_template("Inicio.html",datos=libros,categoria=categoria)
+    return render_template("base.html")
 
 port=os.environ["PORT"]
 app.run('0.0.0.0',int(port),debug=False)
