@@ -1,0 +1,144 @@
+body{
+margin: 0;
+padding: 0;
+text-align: center;
+font-family: verdana, tahoma, arial, sans-serif;
+font-size: 11px;
+background-color: #252A52;
+background: url(Imagenes/bg2.jpg);
+}
+
+p{
+	line-height: 2em;
+	margin: 10px;
+	padding-left: 20px;
+}
+
+a{
+color: #958F81;
+text-decoration: none;
+}
+
+#Fondo{
+	width: 700px;
+	background-color: #272621;
+	text-align: left;
+	margin-right: auto;
+	margin-left: auto;
+	color: #FFFFFF;
+	margin-top: 0px;
+}
+
+#Cabecera{
+	width: 700px;
+	height: 200px;
+	position: static;
+	background: url(Imagenes/Baner_Prejuicio.png) no-repeat;
+	color: #FAF3E9;
+	text-align: right;
+}
+
+#linkList{
+position: absolute;
+top: 215px;
+width: 170px;
+margin-left: 530px;
+color: #999;
+}
+
+footer{
+width: 680px;
+background-color: #545047;
+border-top: 1px solid #c5c5c5;
+padding-top: 10px;
+padding-bottom: 10px;
+padding-left: 20px;
+}
+
+.txt{
+	width: 500px;
+	padding-top: 20px;
+}
+
+.txt h3{
+	height: 30px;
+	width: 500px;
+	padding-left: 20px;
+}
+
+.txt h4{
+	height: 10px;
+	width: 500px;
+	padding-left: 215px;
+	text-decoration: underline;
+}
+
+#linkList h3{
+	width: 199px;
+	height: 20px;
+	margin-left: 1px;
+	margin-top: 20px;
+}
+
+a:hover{
+color: #fff;
+}
+
+footer a{
+color: #D39235;
+text-decoration: underline;
+}
+
+footer a:hover{
+color: #fff;
+}
+
+#linkList ul{
+margin: 0;
+padding: 0;
+}
+
+#linkList li{
+margin: 0;
+padding: 10px;
+border-bottom: 1px solid #c5c5c5;
+list-style-type: none;
+}
+.center{
+	text-align: center;
+}
+
+table{
+	margin: 20px;
+	width: 500px;
+	border-collapse: collapse;
+}
+
+tr, td, th{
+	border: 1px solid #fff;
+}
+th{
+	color: #64C6B7;
+	text-align: center;
+}
+td{
+	color: #D2D2D2;
+}
+img{
+	margin: 10px;
+}
+.destacar{
+	background-color: #FFF;
+	opacity: 0.6;
+	border-radius: 10px;
+	color: #000;
+	font-weight: bold;
+	font-style: italic;
+}
+form{
+	margin: 20px;
+}
+
+fieldset{
+	color: #64C6B7;
+}
