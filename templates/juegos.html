@@ -2,12 +2,20 @@
 {% block title %}buscador de juegos{% endblock %}
 {% block baner %}Juegos{% endblock %}
 {% block contenido %}
-    {% if met = 1 %}
+    {% if met %}
         <h3>buscador de juegos</h3>
         <form action="/" method="POST">
             <fieldset>
                 <legend>Buscar:</legend>
-                <label>Por nombre:</label><br/><input type="text" name="busqueda">
+                <label>Por nombre:</label><br/><input type="text" name="busqueda"><br/>
+                <label>Por categoria:</label><br/>
+                <select name="cate">
+                    <option value="nada"></option>
+                    {% for nombre in cate -%}
+                        <option value="{{nombre}}">{{nombre}}</option>
+                    {% endfor -%}
+                </select><br/>
+                <input type="submit" value="Enviar">
             </fieldset>
         </form>
     {% else %}
@@ -29,7 +37,11 @@
                 <th>Mas</th>
             </tr>
             {% for juego in lista -%}
-            
+                <tr>
+                    <td class="center">{{juego.nombre}}</td>
+                    <td class="center">{{juego.desarrollador}}</td>
+                    <td class="center"><a href="/juego/{{juego.id}}">Detalle</a></td>
+                </tr>
             {% endfor -%}
         </table>
     {% endif %}
