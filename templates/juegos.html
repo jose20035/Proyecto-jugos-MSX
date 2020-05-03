@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}buscador de juegos{% endblock %}
+{% block baner %}Juegos{% endblock %}
+{% block contenido %}
+    {% if met = 1 %}
+        <h3>buscador de juegos</h3>
+        <form action="/" method="POST">
+            <fieldset>
+                <legend>Buscar:</legend>
+                <label>Por nombre:</label><br/><input type="text" name="busqueda">
+            </fieldset>
+        </form>
+    {% else %}
+        <h3>buscador de juegos</h3>
+        <form action="/" method="POST">
+            <fieldset>
+                <legend>Buscar:</legend>
+                <label>Por nombre:</label><br/><input type="text" name="busqueda">
+            </fieldset>
+        </form>
+    {% endif %}
+{% endblock %}
