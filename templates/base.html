@@ -2,7 +2,7 @@
 <html lang="es" >
 <head>
 	<meta charset="utf-8">
-	<title>Boxeo</title>
+	<title>{% block title %}{% endblock %}</title>
 	<link rel="shortcut icon" href="{{url_for('static', filename='imagenes/MSX-3.gif')}}">
 	<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/base.css')}}">
 </head>
@@ -11,41 +11,15 @@
 <div id="Fondo">
 	<header>
 		<div id="Cabecera">
-			<h1><span style="padding-right:10px;">Boxeo</span></h1>
-			<h2><span style="padding-right:10px;">Inicio</span></h2>
+			<h1><span style="padding-right:10px;">{% block baner %}{% endblock %}</span></h1>
 		</div>
 
-		<section class="txt">
-			<h3>Inicio</h3>
-			<p>En esta pagina encontrareis información Sobre el deporte del boxeo.<br>
-			También tiene información de lo más básico del boxeo para gente que quiera saber más sobre este deporte y busque los conceptos básicos.</p>
-		</section>
 	</header>
 
 	<div class="txt">
 		<section class="txt">
-			<h3>¿Que es el boxeo?</h3>
-			<p>El boxeo es un deporte individual de contacto en el que dos contrincantes luchan en un cuadrilátero utilizando sus puños con guantes.<br>
-			Los combates se realizan en intervalos de 3 minutos llamados round y 1 minuto de descanso entre cada round.</p>
+			{% block contenido %}{% endblock%}
 		</section>
-
-		<article class="txt">
-			<h3>¿Formas de ganar?</h3>
-			<p>Para ganar en este deporte se puede ganar de 3 formas:</p>
-			<ul>
-				<li>Por puntos</li>
-			</ul>
-			<p>Si pasan un numero de round determinado por el tipo de competición (Normalmente 15) y los dos boxeadores singuen en pie la decisión de quien ganara pasara a manos de los jueces que darán un puntaje a cada boxeador en función del numero de golpes que has dado al rival, donde ha dado esos golpes y el Numero de caídas.</p>
-			<ul>
-				<li>KO técnico</li>
-			</ul>
-			<p>Cuando un boxeador cae al suelo tiene 10 segundos para levantarse si no se levanta en ese tiempo perderá la pelea por KO técnico,También se denomina KO técnico cuando uno de los luchadores no quiere continuar o su entrenador para el combate (Tira la toalla).</p>
-			<ul>
-				<li>KO</li>
-			</ul>
-			<p>El KO se consigue de dos formas la primera y la más normal cuando un luchador cae muy repetidas veces y solo este recibiendo golpes, en ese momento el árbitro para la pelea por la seguridad del boxeador. La segunda forma es cuando uno de los boxeadores consiguen golpear de tal forma que deje inconsciente al otro boxeador, en ese momento el árbitro para la pelea sin contar hasta 10.</p>
-			<p>Esto puede variar dependiendo de la competición en la que los luchadores se encuentren</p>
-		</article>
 
 		<footer>
 			Copyright © 2018 <a href="https://josecalderon359933504.wordpress.com/">José Miguel</a>
@@ -59,18 +33,6 @@
 			<div id="lselect">
 				<ul>
 					<li><a href="index.html">Inicio</a></li>
-					<li><a href="Prejuicio.html">Perjuicios y Beneficios</a></li>
-					<li><a href="Ubicacion.html">Ubicación</a></li>
-					<li><a href="Formulario.html">Formulario</a></li>
-				</ul>
-			</div>
-
-			<div id="larchives">
-				<h3 class="archives"><span>Links</span></h3>
-				<ul>
-					<li><a href="https://es.wikipedia.org/wiki/Boxeo">Wikipedia</a></li>
-					<li><a href="http://espndeportes.espn.com/boxeo/">Noticioas</a></li>
-					<li><a href="http://www.feboxeo.com/breve-historia/">Boxeo en España</a></li>
 				</ul>
 			</div>
 		</div>

@@ -5,7 +5,7 @@ text-align: center;
 font-family: verdana, tahoma, arial, sans-serif;
 font-size: 11px;
 background-color: #252A52;
-background: url(Imagenes/bg2.jpg);
+background: url('../../static/imagenes/bg2.jpg');
 }
 
 p{
@@ -33,7 +33,7 @@ text-decoration: none;
 	width: 700px;
 	height: 200px;
 	position: static;
-	background: url(Imagenes/Baner_Prejuicio.png) no-repeat;
+	background: url('../../static/imagenes/Baner.jpg') no-repeat;
 	color: #FAF3E9;
 	text-align: right;
 }
