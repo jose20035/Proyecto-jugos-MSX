@@ -18,5 +18,19 @@
                 <label>Por nombre:</label><br/><input type="text" name="busqueda">
             </fieldset>
         </form>
+        <h3>Juegos coincidentes</h3>
+        <table>
+            <tr>
+                <th colspan="3">Resultado</th>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <th>Desarrollador</th>
+                <th>Mas</th>
+            </tr>
+            {% for juego in lista -%}
+            
+            {% endfor -%}
+        </table>
     {% endif %}
 {% endblock %}
