@@ -12,7 +12,9 @@ for juego in juegos:
 
 app = Flask(__name__)
 
-@app.route('/', methods=["GET","POST"])
+
+
+@app.route('/juegos', methods=["GET","POST"])
 def inicio():
     if request.method=="GET":
         met=1
@@ -42,9 +44,9 @@ def inicio():
             abort(404)
 
 @app.route('/juego/<id>')
-def juegos(id):
+def detalles_juegos(id):
     for juego in juegos:
-        if juego.get("id") == id:
+        if juego.get("id") == int(id):
             return render_template("juego_detail.html",juego=juego)
     abort(404)
 
