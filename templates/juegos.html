@@ -7,14 +7,14 @@
         <form action="/" method="POST">
             <fieldset>
                 <legend>Buscar:</legend>
-                <label>Por nombre:</label><br/><input type="text" name="busqueda"><br/>
+                <label>Por nombre:</label><br/><input type="text" name="busqueda"><br/><br/>
                 <label>Por categoria:</label><br/>
-                <select name="cate">
-                    <option value="nada"></option>
+                <select name="recate">
+                    <option value=""></option>
                     {% for nombre in cate -%}
                         <option value="{{nombre}}">{{nombre}}</option>
                     {% endfor -%}
-                </select><br/>
+                </select><br/><br/>
                 <input type="submit" value="Enviar">
             </fieldset>
         </form>
@@ -23,7 +23,19 @@
         <form action="/" method="POST">
             <fieldset>
                 <legend>Buscar:</legend>
-                <label>Por nombre:</label><br/><input type="text" name="busqueda">
+                <label>Por nombre:</label><br/><input type="text" name="busqueda" value="{{busq}}"><br/><br/>
+                <label>Por categoria:</label><br/>
+                <select name="recate">
+                    <option value=""></option>
+                    {% for nombre in cate -%}
+                        {% if recate == nombre %}
+                            <option value="{{nombre}}" selected>{{nombre}}</option>
+                        {% else %}
+                            <option value="{{nombre}}">{{nombre}}</option>
+                        {% endif %}
+                    {% endfor -%}
+                </select><br/><br/>
+                <input type="submit" value="Enviar">
             </fieldset>
         </form>
         <h3>Juegos coincidentes</h3>

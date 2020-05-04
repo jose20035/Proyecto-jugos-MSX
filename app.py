@@ -20,14 +20,26 @@ def inicio():
     else:
         respuesta=[]
         busq=request.form.get("busqueda")
-        if busq == "":
-            return render_template("juegos.html",lista=juegos)
-        else:
+        recate=request.form.get("recate")
+        if busq == "" and recate == "":
+            return render_template("juegos.html",lista=juegos,busq=busq,cate=cate,recate=recate)
+        elif busq != "" and recate == "":
             for juego in juegos:
                 if str(juego.get("nombre")).startswith(busq):
                     respuesta.append(juego)
-            return render_template("juegos.html",lista=respuesta)
-            
+            return render_template("juegos.html",lista=respuesta,busq=busq,cate=cate,recate=recate)
+        elif busq == "" and recate != "":
+            for juego in juegos:
+                if str(juego.get("categoria")) == recate:
+                    respuesta.append(juego)
+            return render_template("juegos.html",lista=respuesta,busq=busq,cate=cate,recate=recate)
+        elif busq != "" and recate != "":
+            for juego in juegos:
+                if str(juego.get("nombre")).startswith(busq) and str(juego.get("categoria")) == recate:
+                    respuesta.append(juego)
+            return render_template("juegos.html",lista=respuesta,busq=busq,cate=cate,recate=recate)
+        else:
+            abort(404)
 
 port=os.environ["PORT"]
 app.run('0.0.0.0',int(port),debug=True)
