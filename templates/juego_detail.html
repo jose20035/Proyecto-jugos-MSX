@@ -1,6 +1,17 @@
 {% extends "base.html" %}
-{% block title %}{% endblock %}
-{% block baner %}{% endblock %}
+{% block title %}{{juego.nombre}}{% endblock %}
+{% block baner %}
+    <h1><span style="padding-right:10px;">juego</span></h1>
+    <h1><span style="padding-right:10px;">nº {{juego.id}}</span></h1>
+{% endblock %}
 {% block contenido %}
+    <h3>{{juego.nombre}}</h3>
+    <ul>
+        <li>Sistema: {{juego.sistema}}.</li>
+        <li>Distribuido por: {{juego.distribuidor}}.</li>
+        <li>Desarrollado por: {{juego.desarrollador}}.</li>
+        <li>Caregoria: {{juego.categoria}}.</li>
+        <li>Año de salida al mercado: {{juego.año}}.</li>
+    </ul>
 
 {% endblock %}

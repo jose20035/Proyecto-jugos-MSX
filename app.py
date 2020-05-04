@@ -41,5 +41,12 @@ def inicio():
         else:
             abort(404)
 
+@app.route('/juego/<id>')
+def juegos(id):
+    for juego in juegos:
+        if juego.get("id") == id:
+            return render_template("juego_detail.html",juego=juego)
+    abort(404)
+
 port=os.environ["PORT"]
 app.run('0.0.0.0',int(port),debug=True)
