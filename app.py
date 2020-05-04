@@ -12,10 +12,12 @@ for juego in juegos:
 
 app = Flask(__name__)
 
-
+@app.route('/')
+def inicio():
+    return render_template("principal.html")
 
 @app.route('/juegos', methods=["GET","POST"])
-def inicio():
+def buscar_juegos():
     if request.method=="GET":
         met=1
         return render_template("juegos.html",met=met,cate=cate)
